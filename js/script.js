@@ -1,4 +1,3 @@
-// Menu burger pour mobile
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
@@ -108,11 +107,7 @@ if (projetCard && window.innerWidth > 768) {
 const sliderConfig = {
     // MODIFIEZ ICI AVEC VOS NOMS DE FICHIERS
     images: [
-        '/imgs/recyclean_img/ic_launcher.png',
-        // 'imgs/recyclean_imgs/image2.jpg',
-        // 'imgs/recyclean_imgs/image3.jpg',
-        // 'imgs/recyclean_imgs/image4.jpg'
-        // Ajoutez autant d'images que vous voulez
+        'imgs/recyclean_img/ic_launcher.png',
     ],
     currentIndex: 0,
     intervalId: null,
