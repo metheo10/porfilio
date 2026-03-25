@@ -484,6 +484,189 @@ h1, h2, h3 {
     transform: scale(1.2);
 }
 
+/* ========== COMPÉTENCES CRÉATIVES ========== */
+.skills-creatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.creative-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.creative-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.creative-card:hover::before {
+    transform: scaleX(1);
+}
+
+.creative-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -12px rgba(37, 99, 235, 0.15);
+    border-color: #b9d0f8;
+}
+
+.creative-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.creative-card:hover .creative-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+}
+
+.creative-icon i {
+    font-size: 2.5rem;
+    color: #2563eb;
+    transition: all 0.3s ease;
+}
+
+.creative-card:hover .creative-icon i {
+    color: white;
+}
+
+.creative-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+}
+
+.creative-card p {
+    color: #475569;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.skill-level {
+    background: #e2e8f0;
+    border-radius: 20px;
+    height: 6px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.level-bar {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    height: 100%;
+    border-radius: 20px;
+    animation: fillBar 1s ease-out;
+}
+
+.skill-percent {
+    font-size: 0.8rem;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--final-width);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-creatives-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .creative-card {
+        padding: 1.5rem;
+    }
+    
+    .creative-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .creative-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* Section Blender Showcase */
+.blender-showcase {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.model3d-wrapper {
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.02), 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.blender-badge {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.blender-badge span {
+    background: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2563eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .model3d-wrapper {
+        padding: 1rem;
+    }
+    
+    .blender-badge {
+        gap: 1rem;
+    }
+    
+    .blender-badge span {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
 /* Animation de chargement pour les images */
 @keyframes fadeIn {
     from {
